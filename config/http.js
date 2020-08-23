@@ -51,7 +51,7 @@ module.exports.http = {
 
     // bodyParser: (function _configureBodyParser(){
     //   var skipper = require('skipper');
-    //   var middlewareFn = skipper({ strict: true });
+    //   var middlewareFn = skipper({ strict: false, maxTimeToBuffer: 100000 });
     //   return middlewareFn;
     // })(),
 

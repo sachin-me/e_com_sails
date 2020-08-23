@@ -9,8 +9,8 @@ module.exports = {
         price: {
             type: 'number'
         },
-        image: {
-            type: 'string'
+        images: {
+            type: 'json', columnType: 'array'
         },
         category: {
             type: 'string'

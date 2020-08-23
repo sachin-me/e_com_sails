@@ -11,12 +11,12 @@
     </div>
     <div class="main container">
       <div>
-        <form action="/post" method="post" class="product-form">
-          <input type="text" placeholder="name...">
-          <input type="text" placeholder="category...">
-          <input type="number" name="" id="" placeholder="price...">
-          <textarea name="" id="" cols="10" rows="10" placeholder="description..."></textarea>
-          <input type="file" name="" id="" placeholder="browse file...">
+        <form action="/product" enctype="multipart/form-data" method="post" class="product-form">
+          <input type="text" name="name" placeholder="name...">
+          <input type="text" name="category" placeholder="category...">
+          <input type="number" name="price" id="" placeholder="price...">
+          <textarea id="" cols="10" rows="10" name="des" placeholder="description..."></textarea>
+          <input type="file" name="image" id="" placeholder="browse file..." multiple>
           <div class="submit-btn">
             <input type="submit" value="Submit">
           </div>

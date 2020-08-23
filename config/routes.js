@@ -23,7 +23,9 @@ module.exports.routes = {
 
   '/cart': { view: 'pages/cart' },
 
-  '/create': { view: 'pages/create' }
+  '/create': { view: 'pages/create' },
+
+  'POST /product': { controller: 'ProductController', action: 'create' }
 
   /***************************************************************************
   *                                                                          *
