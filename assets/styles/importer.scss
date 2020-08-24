@@ -55,3 +55,38 @@
         text-align: center;
     }
 }
+
+.product_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 30px;
+    .product_list {
+        flex: 0 0 30%;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        .p_name, .p_price, .p_info {
+            margin-top: 10px;
+            font-size: 20px;
+            padding-left: 15px;
+        }
+        .cart-btn {
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 20px;
+            input[type='button'] {
+                height: 45px;
+                width: 100px;
+                background: rgba(4, 36, 41, 0.89);
+                outline: none;
+                border-radius: 5px;
+                color: aliceblue;
+                border: 1px solid rgba(4, 36, 41, 0.89);
+                cursor: pointer;  
+                font-size: 15px;              
+            }
+        }
+    }
+}

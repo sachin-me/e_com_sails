@@ -13,7 +13,7 @@ module.exports = {
     }
 
     req.file('image').upload({
-      dirname: require('path').resolve(sails.config.appPath, 'assets/images')
+      dirname: require('path').resolve(sails.config.appPath, '.tmp/public/images')
     }, async function whenDone(err, uploadedFiles) {
       if (err) {
         sails.log.error(err);
@@ -35,5 +35,11 @@ module.exports = {
     });
 
 
+  },
+  getProducts: async function(req, res) {
+    const products = await sails.models.product.find({});
+    res.view('pages/homepage', {
+      products: products
+    })
   }
 }

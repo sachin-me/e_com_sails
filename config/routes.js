@@ -25,8 +25,9 @@ module.exports.routes = {
 
   '/create': { view: 'pages/create' },
 
-  'POST /product': { controller: 'ProductController', action: 'create' }
+  'POST /product': { controller: 'ProductController', action: 'create' },
 
+  'GET /' : { controller: 'ProductController', action: 'getProducts' }
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

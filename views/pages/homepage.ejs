@@ -20,6 +20,29 @@ setTimeout(function sunrise () {
     </div>
   </div>
   <div class="main container">
-    This is main page
+    <div class="container">
+      <% if(products != null && products.length > 0){ %>
+        <div class="row">
+          <div class="product_wrapper">
+            <% products.forEach(product => { %>
+              <div class="product_list">
+                <% product.images.forEach(image => { %>
+                  <img src=<%= image %> alt="" srcset="">
+                <% }) %>
+                <div class="p_name"><span>Name- </span><span><%= product.name %></span></div>
+                <div class="p_price"><span>Price- </span><span><%= product.price %></span></div>
+                <div class="p_info"><span>Info- </span><span><%= product.des %></span></div>
+                <div class="cart-btn">
+                  <input type="button" value="Add to cart">
+                </div>
+              </div>
+            <%  }); %>
+          </div>
+        </div>
+
+      <% }else{ %>
+        <div>0 products found :)</div>
+      <% } %>      
+      </div>
   </div>
 </div>
