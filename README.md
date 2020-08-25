@@ -20,3 +20,6 @@ a [Sails v1](https://sailsjs.com) application
   to run the app in the development mode.<br>
   Open [http://localhost:1337](http://localhost:1337) to view it in the browser.
 
+***
+
+Note:- You need to install `sails`, `ruby` and `ruby-sass` globally in your system.
