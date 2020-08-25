@@ -29,7 +29,9 @@ module.exports.routes = {
 
   'GET /' : { controller: 'ProductController', action: 'getProducts' },
 
-  'POST /add-to-cart': { controller: 'CartController', action: 'addToCart' }
+  'POST /add-to-cart': { controller: 'CartController', action: 'addToCart' },
+
+  'GET /cart': { controller: 'CartController', action: 'getCartList' }
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
