@@ -69,12 +69,13 @@
     }
     .p_name,
     .p_price,
+    .p_cat,
     .p_info {
       margin-top: 10px;
       font-size: 20px;
       padding-left: 15px;
     }
-    .p_name {
+    .p_name, .p_cat {
       text-transform: capitalize;
     }
     .cart-btn {
