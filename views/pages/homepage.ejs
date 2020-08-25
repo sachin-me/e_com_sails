@@ -33,7 +33,14 @@ setTimeout(function sunrise () {
                 <div class="p_price"><span>Price- </span><span><%= product.price %></span></div>
                 <div class="p_info"><span>Info- </span><span><%= product.des %></span></div>
                 <div class="cart-btn">
-                  <input type="button" value="Add to cart">
+                  <form action="/add-to-cart" method="post">
+                    <div class="qty-wrapper">
+                      <span>Quantity- </span>
+                      <input type="number" min="1" name="qty" value="1" id="">
+                    </div>
+                    <input type="hidden" name="id" value=<%= product.id %>>
+                    <input type="submit" value="Add to cart">
+                  </form>
                 </div>
               </div>
             <%  }); %>
