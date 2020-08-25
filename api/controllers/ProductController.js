@@ -5,8 +5,8 @@ module.exports = {
     const { name, category, price, des, image } = req.body;
 
     const paramObj = {
-      name,
-      category,
+      name: name.toLowerCase(),
+      category: category.toLowerCase(),
       price,
       des,
       images: []

@@ -20,6 +20,12 @@ setTimeout(function sunrise () {
     </div>
   </div>
   <div class="main container">
+    <div class="search-wrapper">
+      <form action="/search" method="post">
+        <input type="search" name="search" id="" placeholder="search by name or category...">
+        <input type="submit" value="Search">
+      </form>
+    </div>
     <div class="container">
       <% if(products != null && products.length > 0){ %>
         <div class="row">
