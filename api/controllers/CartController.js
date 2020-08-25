@@ -25,7 +25,6 @@ module.exports = {
 
   getCartList: async function (req, res) {
     const carts = await sails.models.cart.find({}).populate('product');
-    console.log(carts, 'carts');
     res.view('pages/cart', {
       carts: carts
     })

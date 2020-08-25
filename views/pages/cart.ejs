@@ -1,13 +1,41 @@
-
 <div class="">
-  <div class="header" style="transition: none; padding: 30px 30px 40px 0; display: flex; justify-content: space-between;">
-    <a href='/' class="text-center" style="color: aliceblue; text-decoration: none; padding-left: 30px; font-size: large;">E-COM</a>
+  <div class="header"
+    style="transition: none; padding: 30px 30px 40px 0; display: flex; justify-content: space-between;">
+    <a href='/' class="text-center"
+      style="color: aliceblue; text-decoration: none; padding-left: 30px; font-size: large;">E-COM</a>
     <div>
-      <a href="/create" style="font-weight: 300; text-decoration: underline; color: aliceblue; text-decoration: none; font-size: large;padding-right: 30px;">Create Product</a>
-      <a href="/cart" style="font-weight: 300; text-decoration: underline; color: aliceblue; text-decoration: none; font-size: large;">CART</a>
+      <a href="/create"
+        style="font-weight: 300; text-decoration: underline; color: aliceblue; text-decoration: none; font-size: large;padding-right: 30px;">Create
+        Product</a>
+      <a href="/cart"
+        style="font-weight: 300; text-decoration: underline; color: aliceblue; text-decoration: none; font-size: large;">CART</a>
     </div>
   </div>
   <div class="main container">
-    This is a cart
+    <div class="container">
+      <% if(carts != null && carts.length > 0){ %>
+      <div class="row">
+        <div class="product_wrapper">
+          <% carts.forEach(cart => { %>
+          <div class="product_list">
+            <% cart.product.images.forEach(image => { %>
+            <img src=<%= image %> alt="" srcset="">
+            <% }) %>
+            <div class="p_name"><span>Name- </span><span><%= cart.product.name %></span></div>
+            <div class="p_price"><span>Price- </span><span><%= cart.product.price %></span></div>
+            <div class="p_info"><span>Info- </span><span><%= cart.product.des %></span></div>
+            <div class="cart-wrapper">
+              <span>Quantity- </span>
+              <span><%= cart.qty %></span>
+            </div>
+          </div>
+          <%  }); %>
+        </div>
+      </div>
+
+      <% }else{ %>
+      <div>0 items found :)</div>
+      <% } %>
+    </div>
   </div>
 </div>
